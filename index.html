@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<title>Sistema de recaudo</title>
+	<link rel="stylesheet" href="menu.css">
+</head>
+<body>
+	<cabecera>		
+	</cabecera>
+
+	<menu>
+		<div class="sidenav col-3-5">
+			<div class="logo">
+		        <a id="logo" onclick="RefrescarMarco('bienvenida.html')">
+					<img src="./img/logo.png" alt="Ir al inicio" title="Ir al inicio" height="100" width="100" />
+				</a>
+			</div> 
+			<!-- <div class="botonera"> -->
+			    <button class="dropdown-btn">Ficheros
+			        <i class="fa fa-caret-down"></i>
+			    </button>
+			    <div class="dropdown-container">
+			        <a id="productos" onclick="RefrescarMarco('productos.html')">Productos</a>
+			        <a href="#">Clientes</a>
+			    </div>
+			    <button class="dropdown-btn">Transacciones
+			        <i class="fa fa-caret-down"></i>
+			    </button>
+			    <div class="dropdown-container">
+			        <a href="#">Recargas</a>
+			        <a href="#">Consumos</a>
+			        <a href="#">Consultas</a>
+			    </div>
+			    <button class="dropdown-btn">Parámetros
+			        <i class="fa fa-caret-down"></i>
+			    </button>
+			    <div class="dropdown-container">
+			        <a href="#">Proveedor</a>
+			        <a href="#">Gestores</a>
+			        <a href="#">Tipos de transacción</a>
+			        <a href="#">Formas de pago</a>
+			    </div>
+			    <a href="#">Salir</a>
+		    <!-- </div> -->
+		</div>
+	</menu>
+	<contenedor>
+		<div class="contenedor cont">
+			<iframe id="marco" width="93%" height="95%" src="./bienvenida.html" frameborder="0">
+				<p>Tu navegador no soporta Frames.</p>
+			</iframe>
+		</div>
+	</contenedor>
+	
+	<pie>
+	</pie>
+	<script>
+		function RefrescarMarco(enlace) {
+		    document.getElementById("marco").src = "./"+enlace;
+		    document.getElementById("marco").reload();
+		}
+	</script>
+	<script src="menu.js"></script>
+</body>
+</html>
