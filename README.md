@@ -1,2 +1,0 @@
-# recaudo
-Sistema de recaudo
